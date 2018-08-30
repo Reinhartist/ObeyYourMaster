@@ -44,7 +44,7 @@ public class CDRepository implements ICDRepository{
 
 	@Transactional(REQUIRED)
 	public String updateCD(CD cd) {
-		if(findCD(cd.getId()) != null) manager.merge(cd);
+		if(findCD(cd.getId()) != null) manager.merge(correctArtistID(cd));
 		return "Updated";
 	}
 	

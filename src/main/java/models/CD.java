@@ -21,8 +21,7 @@ public class CD {
 	private String title;
 	
     @ManyToMany(cascade = { 
-            CascadeType.PERSIST, 
-            CascadeType.MERGE
+            CascadeType.ALL
         }, fetch=FetchType.EAGER)
 	private List<Artist> artists;
 	
